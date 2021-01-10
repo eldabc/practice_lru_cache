@@ -1,0 +1,27 @@
+Diseñe e implemente una estructura de datos basado en el 
+algoritmo del último recientemente utilizado (LRU).
+Debe admitir las siguientes operaciones:
+
+get (key): obtiene el valor (siempre será positivo) de la clave 
+si la clave existe en el caché; de lo contrario, devuelve -1.
+
+put (key, value): 
+establece o inserta el valor si la clave aún no está presente.
+
+Cuando el caché alcanzó su capacidad
+debería invalidar el elemento menos  utilizado antes de insertar un nuevo elemento.
+
+El caché se inicializa con una capacidad positiva.
+
+LRUCache cache = new LRUCache( 2 ); 
+cache.put(1, 1);    -> [1]
+cache.put(2, 2);		-> [1,2]
+cache.get(1);       // returns 1
+cache.put(3, 3);    // evicts key 2 
+cache.get(2);       // returns -1 (not found) 
+cache.put(4, 4);    // evicts key 1 
+cache.get(1);       // returns -1 (not found) 
+cache.get(3);       // returns 3 
+cache.get(4);       // returns 4 
+
+
